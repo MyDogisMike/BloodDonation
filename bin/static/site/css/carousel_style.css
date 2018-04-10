@@ -1,0 +1,29 @@
+/*用于图片轮播的文字开始****************************/
+.carousel-caption {
+	background: #000000;/*设置容器背景颜色为黑色*/
+	color: #ffffff;/*设置文本颜色为白色*/
+	opacity: 0.6;/*设置透明度为70%*/
+	filter:alpha(opacity=70);/*设置透明度兼容ie8及以下版本*/
+	font: 12px "Microsoft YaHei";/*设置字体*/
+	width: 100%;/*设置容器宽度*/
+	left: 0px;/*设置容器左边缘位置*/
+	bottom: 0px;/*设置容器下边缘位置*/
+	padding: 0px 5px;/*设置容器内边距上下各为0，左右各为5像素*/
+	text-align: left;/*设置文本对齐方式为左对齐*/
+}
+
+/*.carousel-caption {
+	background: #ADADAD;/*设置容器背景颜色为黑色*/
+	/*opacity: 0.6;/*设置透明度为70%*/
+	/*filter:alpha(opacity=70);/*设置透明度兼容ie8及以下版本*/
+	/*font: 12px "Microsoft YaHei";/*设置字体*/
+	/*width: 100%;/*设置容器宽度*/
+	/*padding: 0px 5px;/*设置容器内边距上下各为0，左右各为5像素*/
+	/*height: 20%;
+}*/
+
+/*.carousel-caption h3 {
+	color: #000000;
+	margin: 0px;
+	text-align: left;
+}*/

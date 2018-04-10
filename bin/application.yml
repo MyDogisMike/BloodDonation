@@ -1,0 +1,91 @@
+server:
+    #端口
+    port: 8080
+    session:
+        #session过期期限
+        timeout: 1000 # in seconds
+        
+web:
+      upload-path: D:/articlePicture/
+
+spring:
+    devtools:
+       restart:
+          enabled:true  #热部署生效                    
+          #additional-paths:src/main/resources/   #设置重启的目录
+          #exclude: WEB-INF/**                           #classpath目录下的WEB-INF文件夹内容修改不重启
+    jackson:
+      date-format: yyyy-MM-dd HH:mm:ss
+      time-zone: GMT+8
+      joda-date-time-format: yyyy-MM-dd HH:mm:ss
+      serialization:
+        write-date-keys-as-timestamps: false
+    datasource:
+        url: jdbc:mysql://localhost:3306/blood_donation?characterEncoding=UTF-8&useSSL=false
+        username: root
+        password: 123456
+        type: com.alibaba.druid.pool.DruidDataSource # 使用druid数据源
+        driver-class-name: com.mysql.jdbc.Driver
+        maxActive: 2
+        initialSize: 1
+        
+    freemarker:
+        check-template-location: true
+        content-type: text/html
+        expose-request-attributes: true
+        expose-session-attributes: true
+        request-context-attribute: request
+        template-loader-path=classpath: /templates/
+        settings:
+            locale: zh_CN
+            template_update_delay: 0
+            tag_syntax: auto_detect
+            default_encoding: UTF-8
+            output_encoding: UTF-8
+            url_escaping_charset: UTF-8
+            date_format: yyyy-MM-dd
+            time_format: HH:mm:ss
+            datetime_format: yyyy-MM-dd HH:mm:ss
+            number_format: \#.##
+            classic_compatible: true
+            template_exception_handler: rethrow # ignore, debug, html_debug, rethrow
+            whitespace_stripping: true
+        expose-spring-macro-helpers: true
+        suffix: .ftl
+        charset: UTF-8
+        cache: false
+    mvc:
+        static-path-pattern: /**
+    resources:
+        static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
+
+    http:
+      multipart:
+        max-file-size: 100Mb  #设置单个文件的大小
+        max-request-size: 1000Mb #设置单次请求的文件的总大小
+#邮箱设置
+    mail:
+
+        #163邮箱设置(被认为发送垃圾邮件，无语)
+        #host: smtp.163.com
+        #username: German_Shepherd@163.com
+        #邮箱授权码不是邮箱密码
+        #password: Labrador123 
+        #qq邮箱
+        host: smtp.qq.com
+        username: 2238883940@qq.com
+        password: rfoqtegyolktebhi
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true
+                        required: true
+        #域名填写
+        template: http://www.blooddonation.com
+        
+mybatis:
+    mapper-locations: classpath:mapper/**/*Mapper.xml
+    type-aliases-package: com.donation.entity
+    config-location: classpath:mybatis-config.xml

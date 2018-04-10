@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+body{
+	BACKGROUND: url(../img/bj.jpg) repeat-x;
+}
+
+.user_position {
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    color: #333;
+    font-weight: normal;
+    padding-left: 20px;
+    border-bottom: 2px solid red;
+}
+
+#all_articles_container{
+	MARGIN: 0px auto;
+    WIDTH: 780px;
+    HEIGHT: auto;
+}
+
+#all_articles_container li{
+	BORDER-BOTTOM: #ececec 1px solid;
+    CLEAR: both;
+    FONT-SIZE: 24px;
+    BORDER-BOTTOM: #ececec 1px solid;
+    CLEAR: both;
+    FONT-SIZE: 14px;
+    padding: 3px 0px;
+}
+
+#all_articles_container li A:visited {
+    COLOR: #000;
+    TEXT-DECORATION: none;
+}
+
+#all_articles_container li A:link {
+    COLOR: #000;
+    TEXT-DECORATION: none;
+}
+
+#all_articles_container li A:hover{
+	color:red;
+}
+
+#all_articles_container li SPAN {
+    PADDING-RIGHT: 10px;
+    FONT-FAMILY: Arial;
+    FLOAT: right;
+    COLOR: #979797;
+    FONT-SIZE: 11px;
+}

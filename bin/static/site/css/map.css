@@ -1,0 +1,17 @@
+body{
+	BACKGROUND: url(../img/bj.jpg) repeat-x;
+}
+#container {
+	width:800px;
+	height: 580px;
+	margin:0 auto;
+} 
+#panel {
+    position: absolute;
+    background-color: white;
+    max-height: 90%;
+    overflow-y: auto;
+    top: 260px;
+    right: 10px;
+    width: 280px;
+}

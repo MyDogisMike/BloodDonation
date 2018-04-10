@@ -1,0 +1,145 @@
+body{
+	BACKGROUND: url(../img/bj.jpg) repeat-x;
+}
+.my_container a{
+	text-decoration: none;
+	color: #000000;
+}
+.my_container a:visited{
+
+    TEXT-DECORATION: none;
+}
+.my_container a:hover{
+	color: red;
+	text-decoration: none;
+}
+.my_container ul{
+	list-style: none;
+	padding: 0px;
+}
+.my_container .title{
+    FONT-FAMILY: 'microsoft yahei';
+    COLOR: #0060af;
+    FONT-SIZE: 18px;
+    FONT-WEIGHT: bold;
+}
+.my_container{
+	width: 1024px;
+	margin: 0 auto;
+}
+#hot_news{
+	width: 1024px;
+	height: 90px;
+	background-color: #EEEEEE;
+	margin-bottom: 17px;
+	
+}
+
+#hottest{
+	TEXT-ALIGN: center;
+    PADDING-BOTTOM: 0px;
+    LINE-HEIGHT: 40px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    FONT-FAMILY: 'microsoft yahei';
+    HEIGHT: 40px;	
+    FONT-WEIGHT: bold;
+    PADDING-TOP: 0px;
+}
+
+#hottest a{
+	COLOR: #911f2e;
+    FONT-SIZE: 31px;
+    text-decoration: none;
+}
+
+#hottest a:hover{
+	color: red;	
+}
+
+#hot_link{
+	TEXT-ALIGN: center;
+    MARGIN-TOP: 8px;
+    HEIGHT: 20px;	
+    OVERFLOW: hidden;
+}
+
+#hot_link a{
+	COLOR: #911f2e;
+	FONT-SIZE: 14px;
+}
+
+#center{
+	margin-left: 0px;
+}
+
+#center_left{
+
+	width: 640px;
+	
+	float: left;
+}
+
+#center_right{
+	
+	width: 360px;
+
+	margin-left: 20px;
+	float: left;
+}
+
+.carousel-caption {
+	background: #000000;/*设置容器背景颜色为黑色*/
+	color: #ffffff;/*设置文本颜色为白色*/
+	opacity: 0.6;/*设置透明度为70%*/
+	filter:alpha(opacity=70);/*设置透明度兼容ie8及以下版本*/
+	font: 12px "Microsoft YaHei";/*设置字体*/
+	width: 100%;/*设置容器宽度*/
+	left: 0px;/*设置容器左边缘位置*/
+	bottom: 0px;/*设置容器下边缘位置*/
+	padding: 0px 5px;/*设置容器内边距上下各为0，左右各为5像素*/
+	text-align: left;/*设置文本对齐方式为左对齐*/
+}
+
+#double_img{
+	margin: 9px 0;
+}
+
+#block_left{
+	width: 316px;
+	height: 273px;
+
+	float: left;
+}
+
+#block_right{
+	float: left;
+	margin-left: 6px;
+}
+
+#news_list{
+	height: 707px;
+	margin: 0px;
+	text-overflow:ellipsis; /*表示文本超出用省略号代替*/
+	white-space:nowrap; /*表示文本不换行；*/
+}
+
+
+
+#news_list ul li{
+	line-height: 31px;
+}
+
+#news_list ul li a{
+	line-height: 31px;
+}
+
+.blue_li a{
+	color: blue;
+}
+
+#block_left{
+	line-height: 34px;
+	text-overflow:ellipsis; /*表示文本超出用省略号代替*/
+	white-space:nowrap; /*表示文本不换行；*/
+}

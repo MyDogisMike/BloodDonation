@@ -1,0 +1,69 @@
+body{
+	BACKGROUND: url(../img/bj.jpg) repeat-x;
+}
+
+#reg_container a{
+	text-decoration: none;
+    color: #444;
+}
+
+#reg_tb td{
+	line-height: 14px;
+    padding: 5px 0;
+}
+
+#reg_container {
+    WIDTH: 1020px;
+    height: 330px;
+    BACKGROUND: #fff;
+    OVERFLOW: hidden;
+    margin: 0 auto;
+    font-size: 12px;
+    font-family: "ËÎÌו";
+    color: #444;
+    font-weight: 14px;
+}
+
+#reg_form_container {
+    background: #fff;
+    padding: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.user_position {
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    color: #333;
+    font-weight: normal;
+    padding-left: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+#reg_btn_div{
+	height: 40px;
+    line-height: 40px;
+    margin-left: 205px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+#loading {
+	width:200px;
+	height:30px;
+	border:3px solid #C3DAF9;
+	position:absolute;
+	top:300px;
+	left:600px; 
+	z-index:10000; 
+	background-color:#F7F9FC;
+	line-height:25px;
+	vertical-align:middle;
+	font-size:11pt;
+	display:none;
+}
+
+.warn{
+	border:2px solid red;
+}

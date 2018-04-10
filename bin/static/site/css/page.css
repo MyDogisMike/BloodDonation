@@ -1,0 +1,43 @@
+.page_fy A,.homePage,.endPage {
+    BORDER-BOTTOM: #eee 1px solid;
+    BORDER-LEFT: #eee 1px solid;
+    PADDING-BOTTOM: 2px;
+    MARGIN: 2px;
+    PADDING-LEFT: 5px;
+    PADDING-RIGHT: 5px;
+    COLOR: #a40001;
+    BORDER-TOP: #eee 1px solid;
+    BORDER-RIGHT: #eee 1px solid;
+    TEXT-DECORATION: none;
+    PADDING-TOP: 2px;
+}
+
+.page_fy .focus {
+    BORDER-BOTTOM: #a40001 1px solid;
+    BORDER-LEFT: #a40001 1px solid;
+    PADDING-BOTTOM: 2px;
+    BACKGROUND-COLOR: #a40001;
+    MARGIN: 2px;
+    PADDING-LEFT: 5px;
+    PADDING-RIGHT: 5px;
+    COLOR: #fff;
+    BORDER-TOP: #a40001 1px solid;
+    FONT-WEIGHT: bold;
+    BORDER-RIGHT: #a40001 1px solid;
+    PADDING-TOP: 2px;
+}
+
+.off {
+    BORDER-BOTTOM: #eeeeee 1px solid;
+    BORDER-LEFT: #eeeeee 1px solid;
+    PADDING-BOTTOM: 2px;
+    MARGIN: 2px;
+    PADDING-LEFT: 5px;
+    PADDING-RIGHT: 5px;
+    COLOR: #ccc;
+    BORDER-TOP: #eeeeee 1px solid;
+    BORDER-RIGHT: #eeeeee 1px solid;
+    PADDING-TOP: 2px;
+}
+
+

@@ -1,0 +1,47 @@
+/* 弹窗 */
+.message_black{
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height:100%;
+	background: #000;
+	opacity: 0.6;
+}
+.message_box{
+	position: fixed;
+	top:50%;
+	left:50%;
+	-webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width:300px;
+    background: #fff;
+    border:1px solid #ccc;
+    border-radius: 10px;
+}
+.message_box .message_title{
+	padding-top:16px;
+	font-size: 16px;
+	text-align: center;
+	font-weight: 700;
+}
+.message_box .message_con{
+	padding-bottom:16px;
+	text-align: center;
+}
+.message_box .message_bottom{
+	padding:5px;
+	text-align: center;
+	border-top:1px solid #ccc;
+	display: flex;
+}
+.message_box .message_bottom button{
+	background: none;
+	color: #ff9400;
+	padding:6px 0;
+	font-size: 16px;
+	border:0;
+	-webkit-flex:1;
+	-moz-flex:1;
+	flex:1;
+}

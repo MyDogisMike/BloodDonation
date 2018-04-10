@@ -1,0 +1,97 @@
+body{
+	BACKGROUND: url(../img/bj.jpg) repeat-x;
+}
+
+.user_position {
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    color: #333;
+    font-weight: normal;
+    padding-left: 20px;
+    border-bottom: 2px solid red;
+}
+
+
+#show_article_container{
+	MARGIN: 0px auto;
+    WIDTH: 780px;
+    HEIGHT: auto;
+}
+
+#article_title{
+	TEXT-ALIGN: center;
+    MARGIN: 0px auto 15px;
+    FONT-FAMILY: "microsoft yahei","????";
+    FONT-SIZE: 20px;
+}
+
+#publish_info{
+	TEXT-ALIGN: center;
+    COLOR: #555;
+    FONT-SIZE: 12px;
+}
+
+#article_content{
+	MARGIN: 0px auto;
+	width: 710px;
+}
+
+.characters{
+	PADDING-BOTTOM: 15px;
+    LINE-HEIGHT: 180%;
+    PADDING-LEFT: 20px;
+    PADDING-RIGHT: 20px;
+    COLOR: #333;
+    FONT-SIZE: 14px;
+    PADDING-TOP: 15px;
+}
+
+.picture{
+	 text-align: center;
+}
+
+.picture img{
+	 width: 600px;
+	 height: 450px;
+}
+
+.comment_title{
+	MARGIN: 0px auto;
+	LINE-HEIGHT: 32px;
+    MARGIN-TOP: 12px;
+    WIDTH: 700px;
+    BACKGROUND: url(../img/fbht.jpg) no-repeat right 50%;
+    HEIGHT: 32px;
+}
+
+#comment_content{
+	MARGIN: 20px auto;
+	WIDTH: 700px;
+}
+
+#list{
+	MARGIN: 0px auto;
+	WIDTH: 700px;
+}
+.comment_info{
+	margin-left: 23px;
+	margin-bottom: 5px;
+}
+.comment_user{
+	font-size: 16px;
+	color: red;
+}
+.comment_time{
+	font-size: 12px;
+	margin-left: 40px;
+}
+.user_comment{
+	margin-left: 46px;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.comment_item{
+	border-bottom: dashed 1px gray;
+}
+

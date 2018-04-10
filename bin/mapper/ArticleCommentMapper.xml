@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 为这个mapper指定一个唯一的namespace，namespace的值习惯上设置成包名+sql映射文件名，这样就能够保证namespace的值是唯一的 -->
+<mapper namespace="com.donation.mapper.ArticleCommentMapper">
+	<select id="getCommentListByArticleId" parameterType="long" resultType="com.donation.vo.ArticleCommentVO">
+		select c.CONTENT, c.TIME, u.NICKNAME as userName from article_comment c, users u
+		where c.ARTICLE_ID = #{0} and c.USER_ID = u.ID
+		order by c.TIME asc
+	</select>
+</mapper>

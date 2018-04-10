@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 为这个mapper指定一个唯一的namespace，namespace的值习惯上设置成包名+sql映射文件名，这样就能够保证namespace的值是唯一的 -->
+<mapper namespace="com.donation.mapper.ActivityMapper">
+	<select id="getActivityCount" resultType="int">
+		select count(*) from activity 
+		<where>
+			<if test="@com.donation.utils.Ognl@isNotEmpty(status)">
+				and STATUS = #{status}
+			</if>
+			<if test="@com.donation.utils.Ognl@isNotEmpty(userId)">
+				and PUBLISHER_ID = #{userId}
+			</if>
+		</where>
+	</select>
+	
+	<select id="getActivityVOList" parameterType="com.donation.query.LayUIQuery" resultType="com.donation.vo.ActivityVO">
+		select a.*, u.NAME as publisher from activity a, users u where a.PUBLISHER_ID = u.ID
+		<if test="@com.donation.utils.Ognl@isNotEmpty(page) and @com.donation.utils.Ognl@isNotEmpty(limit)">
+			limit #{skipRows}, #{limit}
+		</if>
+	</select>
+	
+	<select id="getActivityVOById" parameterType="long" resultType="com.donation.vo.ActivityVO">
+		select a.*, u.NAME as publisher from activity a, users u where a.ID = #{0} and a.PUBLISHER_ID = u.ID
+	</select>
+	
+	<select id="getActivityListByPage" parameterType="com.donation.query.ArticlePageQuery" resultType="com.donation.entity.Activity">
+		select * from activity where STATUS = 1 order by RELEASE_DATE desc limit #{skipRows}, #{count}
+	</select>
+</mapper>

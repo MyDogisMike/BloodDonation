@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 为这个mapper指定一个唯一的namespace，namespace的值习惯上设置成包名+sql映射文件名，这样就能够保证namespace的值是唯一的 -->
+<mapper namespace="com.donation.mapper.UsersMapper">
+
+	<update id="updateSecurityCodeById" parameterType="com.donation.entity.Users">
+		update users set SECURITY_CODE = #{securityCode}, PROOF_TIME = #{proofTime} where ID = #{id}
+	</update>
+	
+	<update id="updateUserStatusById" parameterType="com.donation.entity.Users">
+		update users set STATUS = #{status} where ID = #{id}
+	</update>
+	
+	<select id="getUserTotal" parameterType="com.donation.query.LayUIQuery" resultType="int">
+		select count(*) from users
+	</select>
+	
+	<select id="getUserList" parameterType="com.donation.query.LayUIQuery" resultType="com.donation.entity.Users">
+		select * from users
+		<if test="@com.donation.utils.Ognl@isNotEmpty(page) and @com.donation.utils.Ognl@isNotEmpty(limit)">
+			limit #{skipRows}, #{limit}
+		</if>
+
+	</select>
+	
+	<select id="getUserList1" resultType="com.donation.entity.Users">
+		select * from users
+	</select>
+	
+	<select id="getEmailsByAreaAndType" resultType="String" parameterType="map">
+		select EMAIL from users where ADDRESS like #{area} and EMAIL is not NULL and BLOOD_TYPE in
+		<foreach collection="bloodType" index="index" item="item" open="(" separator="," close=")">
+			#{item}
+		</foreach>
+	</select>
+</mapper>

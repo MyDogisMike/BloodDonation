@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 为这个mapper指定一个唯一的namespace，namespace的值习惯上设置成包名+sql映射文件名，这样就能够保证namespace的值是唯一的 -->
+<mapper namespace="com.donation.mapper.ActivityRecordMapper">
+	<resultMap type="com.donation.vo.ActivityRecordVO" id="RecordVO">
+		<result column="NAME" property="userName" jdbcType="VARCHAR" />
+	    <result column="EMAIL" property="userEmail" jdbcType="VARCHAR" />
+	    <result column="PHONE_NUMBER" property="userPhone" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<select id="getCountFromActivity" resultType="int">
+		select count(*) from activity_record where ACTIVITY_ID = #{activityId} and USER_ID = #{userId}
+	</select>
+	
+	<select id="getRecordVOList" resultMap="RecordVO">
+		select a.*, u.NAME, u.EMAIL, u.PHONE_NUMBER from activity_record a, users u 
+		where a.ACTIVITY_ID = #{0} and a.USER_ID = u.ID
+	</select>
+</mapper>
